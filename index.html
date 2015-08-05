@@ -1,145 +1,641 @@
 <!DOCTYPE html>
-<html>
+<!--[if lt IE 7 ]> <html class="ie ie6 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
 <head>
-<meta charset="utf-8">
-<title>简历</title>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/style.css">
-<style>
-/*css reset*/
-* {
-       vertical-align: baseline;
-       font-weight: inherit; 
-       font-family: inherit; 
-       font-style: inherit;
-       font-size: 100%;
-       outline: 0;
-       padding: 0;
-       margin: 0;
-       border: 0;
-       font-family: '微软雅黑'
-}
-a{text-decoration: none;}
-ul{list-style: none;}
-a {  
-outline: none;  
-}  
-a:focus {  
-outline: none;  
-}  
-button::-moz-focus-inner, input[type="reset"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="submit"]::-moz-focus-inner, input[type="file"] > input[type="button"]::-moz-focus-inner {
-border:none 
-}
-/*判断浏览器*/
-.update{height: 30px;line-height: 30px;text-align: center;color: #fff;background-color: #e35f16;display: none;}
-.update a{color: #fff;text-decoration: underline;padding-left: 5px;font-weight: bold;}
-.update .closes{float: right;font-size: 12px;color: #000;margin-top: -2px;margin-right: 10px;text-decoration: none;}
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="http://Ray1993.github.io/img/icon.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>王磊 前端开发工程师</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--main style-->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+    <link href="css/perfect-scrollbar.css" rel="stylesheet">
 
+    <!--google font style-->
+    <link href="css/font.css" rel='stylesheet' type='text/css'>
+    <!--font-family: 'Open Sans', sans-serif;-->
 
+    <!-- font css style-->
+    <link rel="stylesheet" href="css/font-awesome.css">
 
-/*main*/
-#login .main img{border-style:none;}
-#login .main .imgbox{width:1170px;height:405px;margin: 0 auto;position: relative;}
-#login .main .imgbox ul{list-style-type:none;margin:0px;padding:0px;}
-#login .main .imgbox ul li{display:none;height: 405px}
-#login .main .imgbox .img-box li:nth-child(1){background: url(../img/login-banner-two.jpg) no-repeat 70px 6px;}
-#login .main .imgbox .img-box li:nth-child(2){background: url(../img/login-banner-one.jpg) no-repeat 5px 76px;}
-#login .main .imgbox .img-box li:nth-child(3){background: url(../img/login-banner-three.jpg) no-repeat 120px 70px;}
-#login .main .imgbox .img-box li p:nth-child(1){font-size: 43.2px;color: #363131}
-#login .main .imgbox .img-box li p:nth-child(2){font-size: 16px;color: #817d7d}
-#login .main .imgbox .img-box li:nth-child(1) p:nth-child(1){padding: 118px 0px 0px 735px}
-#login .main .imgbox .img-box li:nth-child(1) p:nth-child(2){padding: 23px 0px 0px 885px}
-#login .main .imgbox .img-box li:nth-child(2) p:nth-child(1){padding: 130px 0px 0px 729px}
-#login .main .imgbox .img-box li:nth-child(2) p:nth-child(2){padding: 18px 0px 0px 1068px}
-#login .main .imgbox .img-box li:nth-child(3) p:nth-child(1){padding: 116px 0px 0px 839px}
-#login .main .imgbox .img-box li:nth-child(3) p:nth-child(2){padding: 27px 0px 0px 928px}
-#login .main .pager{z-index:3;}
-#login .main .common{position:absolute;height:40px;bottom: 45px;left: 600px}
-#login .main .pager ul{margin-top:5px;}
-#login .main .pager ul li{border-radius: 9px;float:right;color:rgba(225,225,225,0);font-size:15px;display:block;width:9px;height:9px;margin-right:10px;margin-top:5px;text-align:center;line-height:25px;background-color:#c8c8c8;cursor:pointer;}
-
-
-
-</style>
+    <!--for slider style-->
+    <noscript>
+        <link rel="stylesheet" type="text/css" href="css/fallback.css" />
+    </noscript>
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" type="text/css" href="css/fallback.css"/>
+    <![endif]-->
+    <style>
+    body,p,h1,h2,h3,h4,h5 {
+        font-family: 'Microsoft YaHei', sans-serif;
+    }
+    </style>
 </head>
-<body id="login">
-   个人简历
-</body>
-<script src="js/jquery.min.js"></script>
-<script>
-(function($){
- $(document).ready(function () {
-            (new CenterImgPlay()).Start();
+
+<body style="">
+
+    <!--wrapper start-->
+    <div class="wrapper" id="wrapper">
+        <header>
+            <!--banner start-->
+            <div class="banner row" id="banner">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 noPadd slides-container" style="height:100%">
+                    <!--background slide show start-->
+                    <div class="slide">
+                        <img src="images/header-image/header-bg1.jpg" alt="Cinelli">
+                    </div>
+                    <div class="slide">
+                        <img src="images/header-image/header-bg2.jpg" width="1024" height="682" alt="Surly">
+                    </div>
+                    <div class="slide">
+                        <img src="images/header-image/header-bg3.jpg" width="1024" height="683" alt="Cinelli">
+                    </div>
+                    <div class="slide">
+                        <img src="images/header-image/header-bg4.jpg" width="1024" height="685" alt="Affinity">
+                    </div>
+                    <!--background slide show end-->
+                </div>
+
+                <div class="bannerText container">
+                    <h1>我叫王磊</h1>
+                    <p>前端开发工程师，毕业于东华理工大学。热爱前端，乐于尝试新技术，学习能力强，热爱阅读英文资料</p>
+                    <a href="#aboutme" class="mbnt">关于我</a>
+                </div>
+
+            </div>
+            <!--banner end-->
+
+
+            <!--menu start-->
+            <div class="menu">
+                <div class="navbar-wrapper">
+                    <div class="container">
+                        <div class="navwrapper">
+                            <div class="navbar navbar-inverse navbar-static-top">
+                                <div class="container">
+                                    <div class="navbar-header">
+                                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                        </button>
+                                        <a class="navbar-brand" href="#">导航</a>
+                                    </div>
+                                    <div class="navbar-collapse collapse">
+                                        <ul class="nav navbar-nav nav-justified">
+                                            <li class="first menuItem homeLink active">
+                                                <a href="#wrapper">首页</a>
+                                            </li>
+                                            <li class="menuItem">
+                                                <a href="#aboutme">关于我</a>
+                                            </li>
+                                            <li class="menuItem">
+                                                <a href="#technical_title">技能</a>
+                                            </li>
+                                            <li class="menuItem">
+                                                <a href="#exprience">经历</a>
+                                            </li>
+                                            <li class="menuItem">
+                                                <a href="#protfolio">作品集</a>
+                                            </li>
+                                            <li class="menuItem">
+                                                <a href="#reffernces">链接</a>
+                                            </li>
+                                            <li class="menuItem">
+                                                <a href="#contact">联系我</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Navbar -->
+                    </div>
+                </div>
+            </div>
+            <!--menu end-->
+
+        </header>
+
+        <!--about me start-->
+        <section class="aboutme" id="aboutme">
+            <div class="">
+                <div class="row">
+                    <div class=" col-xs-12 col-sm-12 col-md-5 col-lg-5 proPic">
+                        <img src="images/me-back.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class=" col-xs-12 col-sm-12 col-md-6 col-lg-5 aboutCont">
+                        <div class="heading clearfix">
+                            <h2>关于我</h2>
+                        </div>
+
+                        <h3>王磊</h3>
+                        <h4 class="subHeading">来自深圳的前端开发工程师</h4>
+
+                        <div id="description">
+                            <p>2015年的东华理工大学软件工程本科毕业生，2014年7月份开始前端开发工作。有坚实的前端开发基础，又能不断学习新的知识。在接近一年的实习工作中，有数个成熟稳定的项目上线。能熟练使用HTML5，CSS3和JS（jquery、zepto)，长期活跃在github上，对于流行的前端开发框架，如Bootstrap、Angular都有实践经验。英语已过四级，对英文书籍和网站的阅读无多少障碍。如今也在不断地接触着新的技术，在MVC前端框架中选择了angular.js作为深入学习的对象。也有在项目中使用less预处理语言。能简单使用sea.js、angular.js等前沿技术并在不断深入学习中。非常热爱运动，听歌和动漫游戏等等。</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!--about me end-->
+
+        <!--technical start-->
+        <section class="technical" id="technical">
+            <div class="container">
+                <div class="heading">
+                    <h2 id="technical_title">我的技能</h2>
+                    <p>前端开发需要一个持续和长期的学习，前端开发工程师需要在各种领域都有充足的知识。而前端开发的重中之重就是原生javascript的使用，最近在反复阅读《javascript高级编程》来巩固这方面的知识。另外还在学习angular.js以及HTML Canvas游戏开发，希望能把前端MVC的思想贯彻在日常项目中，以及在移动前端开发中更多地使用Canvas画布元素。</p>
+                </div>
+                <div class="row">
+                    <div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea">
+                        <div class=" col-xs-12 skills">
+                            <span class="chart skilBg" data-percent="90">
+                                <span class="percent"></span>
+                            </span>
+                            <h4>git</h4>
+                            <p>几乎每天都在使用自己的<a href="https://github.com/Ray1993">github</a>，而且关注github上的优秀开源项目
+                            </p>
+                        </div>
+                    </div>
+                    <div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea">
+                        <div class=" col-xs-12 skills">
+                            <span class="chart skilBg" data-percent="90">
+                                <span class="percent"></span>
+                            </span>
+                            <h4>HTML5</h4>
+                            <p>HTML5的新特性非常了解，正在深入学习Canvas游戏开发。</p>
+                        </div>
+                    </div>
+                    <div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea">
+                        <div class=" col-xs-12 skills">
+                            <span class="chart skilBg" data-percent="90">
+                                <span class="percent"></span>
+                            </span>
+                            <h4>CSS3</h4>
+                            <p>CSS3的新属性非常了解，在实际项目中多次使用CSS3动画</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea">
+                        <div class=" col-xs-12 skills">
+                            <span class="chart skilBg" data-percent="85">
+                                <span class="percent"></span>
+                            </span>
+                            <h4>javascript( jquery , zepto )</h4>
+                            <p>最近在不断补充原生javascript的编程能力</p>
+                        </div>
+                    </div>
+                    <div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea">
+                        <div class=" col-xs-12 skills">
+                            <span class="chart skilBg" data-percent="80">
+                                <span class="percent"></span>
+                            </span>
+                            <h4>Photoshop</h4>
+                            <p>日常工作中的切图、图片处理都需要用到photoshop</p>
+                        </div>
+                    </div>
+                    <div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea">
+                        <div class=" col-xs-12 skills">
+                            <span class="chart skilBg" data-percent="90">
+                                <span class="percent"></span>
+                            </span>
+                            <h4>Bootstrap3</h4>
+                            <p>很出名的CSS前端框架，多次使用在项目中，比如 <a href="www.deshang365.com">公司官网</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea">
+                        <div class=" col-xs-12 skills">
+                            <span class="chart skilBg" data-percent="85">
+                                <span class="percent"></span>
+                            </span>
+                            <h4>zepto.js</h4>
+                            <p>前沿的移动端框架</p>
+                        </div>
+                    </div>
+                    <div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea">
+                        <div class=" col-xs-12 skills">
+                            <span class="chart skilBg" data-percent="90">
+                                <span class="percent"></span>
+                            </span>
+                            <h4>Sublime Text 3</h4>
+                            <p>日常使用前端开发编辑器，它有很好的界面，丰富的插件和强大的性能</p>
+                        </div>
+                    </div>
+                    <div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea">
+                        <div class=" col-xs-12 skills">
+                            <span class="chart skilBg" data-percent="90">
+                                <span class="percent"></span>
+                            </span>
+                            <h4>English</h4>
+                            <p>我已经过了英语四级，热衷于英文书籍和网站的阅读</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--technical end-->
+
+        <!--exprience start-->
+        <section class="exprience" id="exprience">
+            <div class="container">
+                <div class="heading">
+                    <h2>经历</h2>
+                    <p>2015年6月，毕业于东华理工大学，2014年7月开始了自己的前端开发工程师生涯</p>
+                </div>
+                <div class="row workDetails">
+                    <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
+                        <div class="workYear">
+                            <span class="prevY">至今</span>
+                            <span class="afterY">11,2014</span>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-9 col-md-10 col-lg-10 rightArea">
+                        <div class="arrowpart"></div>
+                        <div class="exCon">
+                            <h4>上海德上网络科技有限公司</h4>
+                            <h5>前端开发工程师</h5>
+                            <p>主要负责大学生教育类产品系统前端页面以及功能模块接口等工作。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row workDetails">
+                    <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
+                        <div class="workYear">
+                            <span class="prevY">11,2014</span>
+                            <span class="afterY">07,2014</span>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-9 col-md-10 col-lg-10 rightArea">
+                        <div class="arrowpart"></div>
+                        <div class="exCon">
+                            <h4>深圳利商软件有限公司</h4>
+                            <h5>前端开发实习生</h5>
+                            <p>主要工作是配合后台完成商城电商模板的搭建</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row workDetails">
+                    <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
+                        <div class="workYear">
+                            <span class="prevY">06,2015</span>
+                            <span class="afterY">09,2011</span>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-9 col-md-10 col-lg-10 rightArea">
+                        <div class="arrowpart"></div>
+                        <div class="exCon">
+                            <h4>东华理工大学</h4>
+                            <h5>软件工程本科生</h5>
+                            <p>在四年的大学生活中我主要学习了比如操作系统，计算机网络，C/C++/java编程语言，数据结构，编译原理和软件工程导论等等。而在2014年3月开始自学前端开发。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--exprience end-->
+
+        <!--protfolio start-->
+        <section class="protfolio" id="protfolio">
+            <div>
+                <div class="portfolioTop clearfix">
+                    <div class="heading">
+                        <h2>作品集</h2>
+                        <p>下面收集了部分我以前开发的网页或者项目，你可以点击导航目录去查看你想了解的项目分类列表，而鼠标悬浮或者在手机上点击下面的块，可以查看它们的标题和得到它们的链接按钮。</p>
+                    </div>
+                    <div class="portfolioFilter">
+                        <ul>
+                            <li>
+                                <a href="#" data-filter="*" class="current">全部</a>
+                            </li>
+                            <li>
+                                <a href="#" data-filter=".personal">个人</a>
+                            </li>
+                            <li>
+                                <a href="#" data-filter=".github">项目经验</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="portfolioContainer row gallery">
+                    <li class="personal col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                        <div class="lightCon">
+                            <span class="hoverBox">
+                               <p class="title">个人博客(正在搭建)</p>
+                                <span class="smallIcon">
+                                    <a href="" title="个人博客" target="_blank" class="linKed">
+                                        <i class="fa fa-link fa-2x"></i>
+                                    </a> 
+                                </span>
+                            </span>
+                            <img src="images/thu-1.jpg" alt="">
+                        </div>
+                    </li>
+                    <li class="personal col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                        <div class="lightCon">
+                            <span class="hoverBox">
+                               <p class="title">个人主页</p>
+                                <span class="smallIcon">
+                                    <a href="http://Ray1993.github.io/" title="个人主页" target="_blank" class="linKed">
+                                        <i class="fa fa-link fa-2x"></i>
+                                    </a> 
+                                </span>
+                            </span>
+                            <img src="images/thu-2.jpg" alt="">
+                        </div>
+                    </li>
+                    <li class="github col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                        <div class="lightCon">
+                            <span class="hoverBox">
+                               <p class="title">利用bootstrap搭建公司官网</p>
+                                <span class="smallIcon">
+                                    <a href="www.deshang365.com" title="利用bootstrap搭建公司官网" target="_blank" class="linKed">
+                                        <i class="fa fa-link fa-2x"></i>
+                                    </a> 
+                                </span>
+                            </span>
+                            <img src="images/thu-3.jpg" alt="">
+                        </div>
+                    </li>
+                    <li class="github fullpage col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                        <div class="lightCon">
+                            <span class="hoverBox">
+                               <p class="title">大学生教育平台智库</p>
+                                <span class="smallIcon">
+                                    <a href="http://ku.deshang365.com/" title="大学生教育平台智库" target="_blank" class="linKed">
+                                        <i class="fa fa-link fa-2x"></i>
+                                    </a> 
+                                </span>
+                            </span>
+                            <img src="images/thu-4.jpg" alt="">
+                        </div>
+                    </li>
+
+                    <li class="github col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                        <div class="lightCon">
+                            <span class="hoverBox">
+                               <p class="title">大学生签到后台管理</p>
+                                <span class="smallIcon">
+                                    <a href="http://www.wlyeah.com/
+ " title="大学生签到后台管理" target="_blank" class="linKed">
+                                        <i class="fa fa-link fa-2x"></i>
+                                    </a> 
+                                </span>
+                            </span>
+                            <img src="images/thu-5.jpg" alt="">
+                        </div>
+                    </li>
+                    <li class="github col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                        <div class="lightCon">
+                            <span class="hoverBox">
+                               <p class="title">风投侠</p>
+                                <span class="smallIcon">
+                                    <a href="http://www.vcshare.cn/" title="风投侠" target="_blank" class="linKed">
+                                        <i class="fa fa-link fa-2x"></i>
+                                    </a> 
+                                </span>
+                            </span>
+                            <img src="images/thu-7.jpg" alt="">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!--protfolio end-->
+        <!--reffernces start-->
+        <section class="reffernces" id="reffernces">
+            <div class="container">
+                <div class="heading">
+                    <h2>链接</h2>
+                    <p>下面是我喜欢的一些网站的简介和地址</p>
+                </div>
+                <div class="row waterfall" data-col-min-width="300">
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 refBox">
+                        <div class="refBoxcon">
+                            <p>jekyll是一个简单的免费的Blog生成工具，类似WordPress。但是和WordPress又有很大的不同，原因是jekyll只是一个生成静态网页的工具，不需要数据库支持。但是可以配合第三方服务,例如discuz。最关键的是jekyll可以免费部署在Github上，而且可以绑定自己的域名</p>
+                            <h3><a href="http://jekyllrb.com/">Jekyll</a></h3>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 refBox">
+                        <div class="refBoxcon">
+                            <p>JSFiddle是一个在线的shell编辑器，通过流行的JS框架创建自定义的环境，以简化JS代码。可以用于测试示例代码。</p>
+                            <h3><a href="https://jsfiddle.net/">JSFiddle</a></h3>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 refBox">
+                        <div class="refBoxcon">
+                            <p>收集CSS3动画的一个网站。你可以拖动自己的图片进去查看动画效果，你也可以自己调节动画的参数或者选择它原有的动画库来生成代码（地址已更新，可访问）</p>
+                            <h3><a href="http://isux.tencent.com/css3/tools.html">CSS3Animation</a></h3>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 refBox">
+                        <div class="refBoxcon">
+                            <p>CSSDesk工具是一个标准的CSS沙盒，可以给予CSS初学者最大的帮助，网站分成三栏，我们可以非常方便的通过在左侧实时修改代码来查看某个CSS属性的改变给HTML元素带来的影响，甚至我们可以把整个网站都放到其中来进行调试，并将调试完成的文件保存为HTMl。唯一的遗憾是缺少代码提示，需要手工输入CSS属性</p>
+                            <h3><a href="http://cssdeck.com/">CssDeck</a></h3>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 refBox">
+                        <div class="refBoxcon">
+                            <p>SoundManager2提供一套在javascript中用来控制声音的API。该Javascript library封装和扩展了Flash的声音功能，为Javascript提供跨平台的音频控制功能。</p>
+                            <h3><a href="http://www.schillmania.com/projects/soundmanager2/">SoundManager2</a></h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 refBox">
+                        <div class="refBoxcon">
+                            <p>Codrops可以称为业内最新且发展最快的网络设计和开发教程网站之一。这个网站差不多于四年前成立,具体日期是2009年8月26日,到目前为止,它吸引了总共超过1000万的页面浏览量，每个月超过88万独立IP访问!他们的数据统计显示了Codrops对网页设计师来说简直是个金矿,因为一旦人们发现这个网站,他们就会被钩住而不愿抽身——Codrops的游客平均会在网站上停留超过4分钟并平均访问6页以上。可以说是令人印象深刻的成绩</p>
+                            <h3><a href="http://tympanus.net/codrops/">Codrops &gt;&gt;</a></h3>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 refBox">
+                        <div class="refBoxcon">
+                            <p>对于一个github新手来说，看到一大堆源码，只会让人头晕脑涨，不知何处入手。他希望看到的是，一个简明易懂的网页，说明每一步应该怎么做。因此，github就设计了Pages功能，允许用户自定义项目首页，用来替代默认的源码列表。所以，github Pages可以被认为是用户编写的、托管在github上的静态网页。</p>
+                            <h3><a href="https://pages.github.com/">GithubPages</a></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--reffernces end-->
+        <!--contact start-->
+        <section class="contact" id="contact">
+            <div class="container topCon">
+                <div class="heading">
+                    <h2>联系我</h2>
+                </div>
+            </div>
+
+        </section>
+        <section class="contactDetails">
+            <div class="container">
+
+                <!--contact info start-->
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h4>联系方式</h4>
+                    <!-- <p> <i class="fa fa-mobile"></i> 15112277883 </p> -->
+                    <p> <i class="fa fa-envelope-o"></i>597176448@qq.com</p>
+                </div>
+                <!--contact info end-->
+
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 comments">
+                    <h4>评论</h4>
+
+                    <div class="ds-thread" data-thread-key="resume" data-title="resume" data-url="http://Ray1993.github.io/resume/"></div>
+                    <!-- 多说评论框 end -->
+                    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+                    <script type="text/javascript">
+                    var duoshuoQuery = {
+                        short_name: "resume"
+                    };
+                    (function() {
+                        var ds = document.createElement('script');
+                        ds.type = 'text/javascript';
+                        ds.async = true;
+                        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                        ds.charset = 'UTF-8';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+                    })();
+                    </script>
+                </div>
+
+                <!--contact form end-->
+
+            </div>
+        </section>
+
+        <!--contact end-->
+
+        <!--footer start-->
+        <section class="footer" id="footer">
+            <div class="container">
+                <ul>
+                    <li><a href="https://github.com/Ray1993"><i class="fa fa-github fa-2x"></i></a>
+                    </li>
+                </ul>
+                <span class="totop"><i class="fa fa-chevron-up"></i>
+                </span>
+            </div>
+            <script type="text/javascript">
+            var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+            document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F65758c63c8e99ab26662baeed5867d1e' type='text/javascript'%3E%3C/script%3E"));
+            </script>
+
+        </section>
+        <!--footer end-->
+
+    </div>
+    <!--wrapper end-->
+
+    <!--modernizr js-->
+    <script type="text/javascript" src="js/modernizr.custom.26633.js"></script>
+
+    <!--jquary min js-->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/jquery.gridrotator.js"></script>
+
+    <script src="js/jquery.waterfall.js"></script>
+    <!--for custom jquary-->
+    <script src="js/custom.js"></script>
+
+    <!--for placeholder jquary-->
+    <script type="text/javascript" src="js/jquery.placeholder.js"></script>
+
+    <!--for menu jquary-->
+    <script type="text/javascript" src="js/stickUp.js"></script>
+    <script type="text/javascript">
+    jQuery(function($) {
+        $(document).ready(function() {
+            //enabling stickUp on the '.navbar-wrapper' class
+            $(".totop").click(function(e) {
+                e.preventDefault();
+                $(".homeLink a").trigger("click");
+            })
+            $('.navbar-wrapper').stickUp({
+                parts: {
+                    0: 'wrapper',
+                    1: 'aboutme',
+                    2: 'technical',
+                    3: 'exprience',
+                    4: 'protfolio',
+                    5: 'reffernces',
+                    6: 'contact'
+                },
+                itemClass: 'menuItem',
+                itemHover: 'active',
+                topMargin: 'auto'
+            });
         });
-        function CenterImgPlay() {
-            this.list = $(".imgbox").children(":first").children();
-            this.indexs = [];
-            this.length = this.list.length;
-            //图片显示时间
-            this.timer = 3000;
-            var index = 0, self = this, pre = 0, handid, isPlay = false, isPagerClick = false;
-            this.Start = function () {
-                this.Init();
-                //计时器，用于定时轮播图片
-                handid = setInterval(self.Play, this.timer);
-            };
-            //初始化
-            this.Init = function () {
-                var o = $(".pager ul li");
-                for (var i = o.length - 1, n = 0; i >= 0; i--, n++) {
-                    this.indexs[n] = o.eq(i).click(self.PagerClick);
-                }
-            };
-            this.Play = function () {
-                isPlay = true;
-                index++;
-                if (index == self.length) {
-                    index = 0;
-                }
-                //先淡出，在回调函数中执行下一张淡入
-                self.list.eq(pre).fadeOut(300, "linear", function () {
-                    var info = self.list.eq(index).fadeIn(500, "linear", function () {
-                        isPlay = false;
-                        if (isPagerClick) { handid = setInterval(self.Play, self.timer); isPagerClick = false; }
-                    }).attr("title");
-                    //图片序号背景更换
-                    self.indexs[index].css("background-color", "#258bdd");
-                    self.indexs[pre].css("background-color", "#c8c8c8");
-                    pre = index;
-                });
-            };
-            //图片序号点击
-            this.PagerClick = function () {
-                if (isPlay) { return; }
-                isPagerClick = true;
-                clearInterval(handid);
-                var oPager = $(this), i = parseInt(oPager.text()) - 1;
-                if (i != pre) {
-                    index = i - 1;
-                    self.Play();
-                }
-            };
-        };
-if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion .split(";")[1].replace(/[ ]/g,"")=="MSIE6.0") 
-{ 
- $(".update").show()
-} 
-else if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion .split(";")[1].replace(/[ ]/g,"")=="MSIE7.0") 
-{ 
- $(".update").show()
-} 
-else if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion .split(";")[1].replace(/[ ]/g,"")=="MSIE8.0") 
-{ 
- $(".update").show()
-} 
-else if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion .split(";")[1].replace(/[ ]/g,"")=="MSIE9.0") 
-{ 
- $(".update").show()
-} 
-$(".closes").click(function(){
-  $(".update").hide()
-})
-})(jQuery); 
-</script>
+
+        $(".navbar.navbar-inverse.navbar-static-top a").click(function() {
+            $(".navbar-collapse").addClass("hideClass");
+        });
+
+
+        $(".navbar.navbar-inverse.navbar-static-top a").click(function() {
+            $(".navbar-collapse").addClass("collapse");
+        });
+
+
+        $(".navbar.navbar-inverse.navbar-static-top a").click(function() {
+            $(".navbar-collapse").removeClass("in");
+        });
+
+        $(".navbar-toggle").click(function() {
+            $(".navbar-collapse").removeClass("hideClass");
+        });
+
+
+    });
+    </script>
+    <!-- for header slider -->
+    <script src="js/jquery.superslides.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+    $('#banner').superslides({
+        animation: 'fade',
+        play: 2000
+    });
+    </script>
+    <!--for portfoli filter jquary-->
+    <script src="js/jquery.isotope.js" type="text/javascript"></script>
+
+    <!--for portfoli lightbox -->
+    <link type="text/css" rel="stylesheet" id="theme" href="css/jquery-ui-1.8.16.custom.css">
+    <link type="text/css" rel="stylesheet" href="css/lightbox.min.css">
+    <script type="text/javascript" src="js/jquery.ui.widget.min.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.rlightbox.js"></script>
+
+    <!--for skill chat jquary-->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.easypiechart.js"></script>
+
+    <!--for Scroll Bar jquary-->
+    <script src="js/jquery.mousewheel.js"></script>
+    <script src="js/perfect-scrollbar.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function($) {
+        $('#description').perfectScrollbar({
+            wheelSpeed: 20,
+            wheelPropagation: false
+        });
+    });
+    </script>
+
+    <!--contact form js-->
+    <script type="text/javascript" src="js/jquery.contact.js"></script>
+</body>
+
 </html>
